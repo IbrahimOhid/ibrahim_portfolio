@@ -1,0 +1,11 @@
+/*font URL ⤵ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@import "tailwindcss";
+
+/*font start */
+@theme {
+    --font-Inter: "Inter", Sans-serif;
+}
+
+/*font end */
