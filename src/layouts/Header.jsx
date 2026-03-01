@@ -11,12 +11,12 @@ const Header = () => {
       <div className="px-8">
         <Navbar />
         {/*  */}
-        <div className="mx-auto pb-16 py-20">
+        <div className="mx-auto pb-20 pt-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 gap-y-12 items-center text-white">
             {/* LEFT */}
             <div className="flex flex-col gap-6">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-tight">
-                Hi, I’m  Ibrahim
+              <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl  font-semibold leading-tight">
+                Hi, I’m <span className="text-teal-300">Mohammad Ibrahim</span>
               </h1>
 
               <p className="text-base sm:text-lg max-w-xl">
@@ -45,7 +45,7 @@ const Header = () => {
             {/* RIGHT IMAGE */}
             <div className="relative  lg:flex justify-center"
             >
-              <div className="relative max-w-md w-full rounded-xl p-1 bg-teal-500">
+              <div className="relative max-w-md w-full rounded-xl p-1 bg-teal-400">
                 <motion.img
                   src={MyImage}
                   alt="Portfolio"
