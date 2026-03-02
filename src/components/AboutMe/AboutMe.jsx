@@ -1,95 +1,66 @@
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import AboutImage from "/image/about_image.jpg";
-import { socialIcons } from "../../data/AboutMeData";
-
-const containerVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.8,
-      ease: "easeOut",
-      staggerChildren: 0.15,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
-};
+import { socialIcons } from "../../data/socialIcon";
+import Title from "../Title/Title";
 
 const AboutMe = () => {
   return (
-    <section className="relative  py-5">
-      <div className=" mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative py-8 overflow-hidden  mx-auto ">
+      <Title value={"About Me"} />
 
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 items-center gap-12"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-        >
-          {/* IMAGE */}
-          <motion.div
-            variants={itemVariants}
-            className="flex justify-center"
-          >
-            <img
-              src={AboutImage}
-              alt="Mohammad Ibrahim"
-              className="w-full  rounded-2xl shadow-xl object-cover"
-            />
-          </motion.div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 lg:gap-20 items-center">
+        {/* IMAGE */}
+        <div className="flex justify-center md:justify-end">
+          <img
+            src={AboutImage}
+            alt="Mohammad Ibrahim"
+            className="w-full  rounded-2xl object-cover"
+          />
+        </div>
 
-          {/* CONTENT */}
-          <motion.div
-            variants={itemVariants}
-            className="text-center md:text-left"
-          >
-            <h3 className="text-3xl font-bold text-teal-400 mb-6">
-              About Me
-            </h3>
+        {/* CONTENT */}
+        <div className="text-center md:text-left">
+          <p className="text-gray-300 text-base sm:text-lg lg:text-xl leading-relaxed max-w-xl mx-auto md:mx-0">
+            I build performant web applications using React.js and modern
+            technologies. Focused on clean UI, scalability, and smooth UX.
+          </p>
 
-            <p className="text-gray-200 text-lg leading-relaxed max-w-xl mx-auto md:mx-0">
-              I build performant web applications using React.js and modern
-              technologies. Focused on clean UI, scalability, and smooth UX.
-            </p>
+          {/* Social Buttons */}
+          <div className="mt-8 sm:mt-10 flex justify-center md:justify-start gap-4 sm:gap-5">
+            {socialIcons.map(({ id, icon: Icon, link }) => (
+              <a
+                key={id}
+                href={`${link}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative 
+                             w-11 h-11 sm:w-12 sm:h-12 lg:w-14 lg:h-14
+                             flex items-center justify-center
+                             rounded-xl sm:rounded-2xl
+                             backdrop-blur-lg
+                             border border-teal-300
+                             shadow-md
+                             transition-all duration-300
+                             group"
+              >
+                {/* Gradient Glow */}
+                <span
+                  className="absolute inset-0 opacity-0 group-hover:opacity-40 transition duration-500 
+                                   bg-gradient-to-tr from-teal-400 via-teal-500 to-teal-500 
+                                   blur-xl"
+                ></span>
 
-            {/* Glass Morphism Social Buttons */}
-            <div className="mt-8 flex justify-center md:justify-start gap-4">
-              {socialIcons.map(({ id, icon: Icon, link }) => (
-                <motion.a
-                  key={id}
-                  href={link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ y: -5, scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="
-                    relative
-                    w-12 h-12
-                    flex items-center justify-center
-                    rounded-xl
-                    backdrop-blur-lg
-                    bg-white/10
-                    border border-white/20
-                    shadow-lg
-                    overflow-hidden
-                    group
-                  "
-                >
-                  {/* Animated Gradient Hover */}
-                  <span className="absolute inset-0 bg-teal-400  opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl" />
-
-                  <Icon className="relative w-6 h-6 text-white z-10" />
-                </motion.a>
-              ))}
-            </div>
-          </motion.div>
-        </motion.div>
+                {/* Icon Auto Balance */}
+                <Icon
+                  className="relative z-10 
+                               w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7
+                               text-white transition-transform duration-300 
+                               group-hover:scale-110"
+                />
+              </a>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

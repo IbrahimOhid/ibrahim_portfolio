@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed left-0 top-0 right-0 z-100 flex items-center justify-between px-8 border-b border-teal-400 bg-teal-900 transition-all py-3 lg:py-0">
+      <nav className="fixed left-0 top-0 right-0 z-100 flex items-center justify-between px-4 border-b border-teal-400 bg-teal-900 transition-all py-3 lg:py-0">
         <Link to="/" className="font-bold text-xl tracking-wider text-teal-300">
           IBRAHIM.
         </Link>
@@ -31,7 +31,7 @@ const Navbar = () => {
         </div>
 
         <div>
-          <div className="max-sm:hidden cursor-pointer px-4 py-2  transition rounded-full">
+          <div className="max-sm:hidden cursor-pointer  py-2  transition rounded-full">
             {" "}
             <a
               href="https://www.facebook.com/iCoxtechnologies/"

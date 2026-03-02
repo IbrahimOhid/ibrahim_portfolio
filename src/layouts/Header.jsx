@@ -8,7 +8,7 @@ import {motion} from 'motion/react'
 const Header = () => {
   return (
     <div>
-      <div className="px-8">
+      <div className="">
         <Navbar />
         {/*  */}
         <div className="mx-auto pb-20 pt-20">
