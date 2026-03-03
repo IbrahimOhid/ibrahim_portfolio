@@ -1,16 +1,18 @@
-import React from 'react'
-import Header from './Header'
-import AboutMe from '../components/AboutMe/AboutMe'
-import Skill from '../components/Skill/Skill'
+import React from "react";
+import Header from "./Header";
+import AboutMe from "../components/AboutMe/AboutMe";
+import Skill from "../components/Skill/Skill";
+import Experience from "../components/Experience/Experience";
 
 const Root = () => {
   return (
-    <div className='font-Inter bg-gradient-to-b from-teal-900 to-gray-900 px-4 sm:px-4'>
-        <Header/>
-        <AboutMe/>
-        <Skill/>
+    <div className="font-Inter bg-gradient-to-b from-teal-900 to-gray-900 px-4 sm:px-4">
+      <Header />
+      <AboutMe />
+      <Experience />
+      <Skill />
     </div>
-  )
-}
+  );
+};
 
-export default Root
+export default Root;
