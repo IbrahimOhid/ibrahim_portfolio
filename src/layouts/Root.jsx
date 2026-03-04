@@ -3,6 +3,7 @@ import Header from "./Header";
 import AboutMe from "../components/AboutMe/AboutMe";
 import Skill from "../components/Skill/Skill";
 import Experience from "../components/Experience/Experience";
+import Project from "../components/Project/Project";
 
 const Root = () => {
   return (
@@ -11,6 +12,7 @@ const Root = () => {
       <AboutMe />
       <Experience />
       <Skill />
+      <Project/>
     </div>
   );
 };

@@ -110,26 +110,20 @@ export const skillIcons = [
     label: "Vite",
   },
   {
-    id: 11,
+    id: 12,
     skillIcon: VisualStudioCode,
     label: "VS Code",
   },
   {
-    id: 12,
+    id: 13,
     skillIcon: Netlify,
     label: "Netlify",
   },
   {
-    id: 13,
+    id: 14,
     skillIcon: Vercel,
     label: "Vercel",
   },
 ];
 
-// export const toolsIcons = [
-//   {
-//     id: 1,
-//     tIcon:,
-//     label: ""
-//   }
-// ]
+

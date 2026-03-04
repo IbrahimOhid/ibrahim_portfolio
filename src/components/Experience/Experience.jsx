@@ -7,16 +7,13 @@ const Experience = () => {
     <div>
       <Title value={"Experience"} />
       <div className=" flex justify-center items-center">
-        
-          <div>
-            <div className="flex justify-center items-center">
               <div className="w-full md:w-8/12 mx-auto">
                 {experienceData.map((eData) => (
                   <div
                     key={eData.id}
-                    className="bg-gray-900 
+                    className="border  border-teal-300
                    rounded-xl 
-                   shadow-md shadow-gray-800
+                   shadow shadow-gray-400
                    transition-all duration-500
                    mb-6 p-4 md:p-6"
                   >
@@ -58,8 +55,8 @@ const Experience = () => {
                   </div>
                 ))}
               </div>
-            </div>
-          </div>
+            
+          
         </div>
       </div>
   );
