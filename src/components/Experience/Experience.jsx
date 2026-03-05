@@ -48,7 +48,7 @@ const Experience = () => {
 
                     {/* Description */}
                     <div className="mt-4">
-                      <p className="text-sm md:text-base text-gray-400 leading-relaxed">
+                      <p className="text-sm md:text-base text-white leading-relaxed">
                         {eData.jobDescription}
                       </p>
                     </div>

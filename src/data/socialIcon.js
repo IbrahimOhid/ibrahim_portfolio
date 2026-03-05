@@ -18,6 +18,7 @@ import {
   VisualStudioCode,
   Netlify,
   Vercel,
+  ReactRouter,
 } from "../utils/SocialIconSvg";
 
 export const socialIcons = [
@@ -84,43 +85,48 @@ export const skillIcons = [
     skillIcon: React,
     label: "React",
   },
-  {
+   {
     id: 7,
+    skillIcon: ReactRouter,
+    label: "ReactRouter",
+  },
+  {
+    id: 8,
     skillIcon: TanStack,
     label: "TanStack",
   },
   {
-    id: 8,
+    id: 9,
     skillIcon: Motion,
     label: "Motion",
   },
   {
-    id: 9,
+    id: 10,
     skillIcon: NPM,
     label: "NPM",
   },
   {
-    id: 10,
+    id: 11,
     skillIcon: Git,
     label: "Git",
   },
   {
-    id: 11,
+    id: 12,
     skillIcon: Vite,
     label: "Vite",
   },
   {
-    id: 12,
+    id: 13,
     skillIcon: VisualStudioCode,
     label: "VS Code",
   },
   {
-    id: 13,
+    id: 14,
     skillIcon: Netlify,
     label: "Netlify",
   },
   {
-    id: 14,
+    id: 15,
     skillIcon: Vercel,
     label: "Vercel",
   },
