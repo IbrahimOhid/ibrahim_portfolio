@@ -9,3 +9,6 @@
 }
 
 /*font end */
+html {
+    scroll-behavior: smooth;
+}

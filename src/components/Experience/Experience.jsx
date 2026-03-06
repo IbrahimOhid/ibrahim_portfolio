@@ -4,7 +4,7 @@ import { experienceData } from "../../data/experience";
 
 const Experience = () => {
   return (
-    <div>
+    <section id="experience" className="py-16">
       <Title value={"Experience"} />
       <div className=" flex justify-center items-center">
               <div className="w-full md:w-8/12 mx-auto">
@@ -58,7 +58,7 @@ const Experience = () => {
             
           
         </div>
-      </div>
+      </section>
   );
 };
 

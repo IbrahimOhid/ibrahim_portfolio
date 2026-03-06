@@ -5,7 +5,7 @@ import Title from "../Title/Title";
 
 const AboutMe = () => {
   return (
-    <section className="relative py-8 overflow-hidden  mx-auto ">
+    <section id="about" className="relative py-16 overflow-hidden  mx-auto ">
       <Title value={"About Me"} />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 lg:gap-20 items-center">

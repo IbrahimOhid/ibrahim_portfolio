@@ -5,7 +5,7 @@ import Title from "../Title/Title";
 const Skill = () => {
   return (
     <div>
-      <section className="relative py-8 overflow-hidden mx-auto">
+      <section className="relative py-16 overflow-hidden mx-auto" id="skills">
         <Title value={"Skills"} />
 
         <div>

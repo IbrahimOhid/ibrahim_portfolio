@@ -1,24 +1,7 @@
 export const navbarData = [
-  {
-    id: 1,
-    name: "Home",
-    path: "/",
-  },
-  {
-    id: 2,
-    name: "About",
-    path: "/about",
-  },
-  {
-    id: 3,
-    name: "Service",
-    path: "/service",
-  },
-  {
-    id: 4,
-    name: "Project",
-    path: "/project",
-  },
+  { id: 1, name: "About Me", path: "about" },
+  
+  { id: 2, name: "Experience", path: "experience" },
+  { id: 3, name: "Skill", path: "skills" },
+  { id: 4, name: "Projects", path: "projects" },
 ];
-
-

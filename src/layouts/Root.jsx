@@ -4,7 +4,7 @@ import AboutMe from "../components/AboutMe/AboutMe";
 import Skill from "../components/Skill/Skill";
 import Experience from "../components/Experience/Experience";
 import Project from "../components/Project/Project";
-import Footer from "../components/Footer/Footer";
+import Footer from "./Footer";
 
 const Root = () => {
   return (

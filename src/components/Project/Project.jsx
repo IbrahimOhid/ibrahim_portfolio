@@ -5,7 +5,7 @@ import NewButton from "../Button/NewButton";
 
 const Project = () => {
   return (
-    <section className="px-4 py-12 sm:px-6 lg:px-8">
+    <section id="projects" className="px-4 py-16 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         {/* Section Title */}
         <Title value={"Projects"} />
