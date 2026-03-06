@@ -49,7 +49,7 @@ export const socialIcons = [
   {
     id: 5,
     icon: WhatsApp,
-    link: "https://wa.me/message/FR6EW7QEADT5I1",
+    link: "https://web.whatsapp.com/send?phone=8801834598910",
     label: "Whatsapp",
   },
 ];

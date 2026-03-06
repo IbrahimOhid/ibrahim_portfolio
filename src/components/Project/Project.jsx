@@ -2,10 +2,22 @@ import React from "react";
 import Title from "../Title/Title";
 import { projectData } from "../../data/projectData";
 import NewButton from "../Button/NewButton";
+import { motion } from "motion/react";
 
 const Project = () => {
   return (
-    <section id="projects" className="px-4 py-16 sm:px-6 lg:px-8">
+    <motion.section
+      id="projects"
+      className="py-16"
+      initial={{ opacity: 0 }}
+      whileInView={{
+        opacity: 1,
+        transition: {
+          duration: 2,
+        },
+      }}
+      viewport={{ once: false }}
+    >
       <div className="mx-auto max-w-7xl">
         {/* Section Title */}
         <Title value={"Projects"} />
@@ -51,7 +63,8 @@ const Project = () => {
                   {/* Button */}
                   <a
                     href={projectLink}
-                    className="mt-6 inline-flex items-center text-teal-400 hover:text-teal-300 transition" target="_blank"
+                    className="mt-6 inline-flex items-center text-teal-400 hover:text-teal-300 transition"
+                    target="_blank"
                   >
                     <NewButton value={"Live"} />
                   </a>
@@ -61,7 +74,7 @@ const Project = () => {
           })}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

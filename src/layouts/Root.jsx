@@ -13,8 +13,8 @@ const Root = () => {
       <AboutMe />
       <Experience />
       <Skill />
-      <Project/>
-      <Footer/>
+      <Project />
+      <Footer />
     </div>
   );
 };

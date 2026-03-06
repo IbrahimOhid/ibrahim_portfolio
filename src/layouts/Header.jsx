@@ -6,6 +6,7 @@ import MyImage from "/image/ibrahim.png";
 import {motion} from 'motion/react'
 
 const Header = () => {
+  const WhatsAppLink = 'https://web.whatsapp.com/send?phone=8801834598910'
   return (
     <div>
       <div className="">
@@ -25,7 +26,7 @@ const Header = () => {
               </p>
 
               {/* Buttons */}
-              <Button value={"Hire Me"} />
+              <Button link={WhatsAppLink} value={"Hire Me"} />
 
               {/* Stats */}
               <div className="grid grid-cols-3 gap-6 pt-4">

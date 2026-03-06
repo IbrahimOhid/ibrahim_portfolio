@@ -1,64 +1,74 @@
 import React from "react";
 import Title from "../Title/Title";
 import { experienceData } from "../../data/experience";
+import { motion } from "motion/react";
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-16">
+    <motion.section
+      id="experience"
+      className="py-16"
+      initial={{ opacity: 0 }}
+      whileInView={{
+        opacity: 1,
+        transition: {
+          duration: 2,
+        },
+      }}
+      viewport={{ once: false }}
+    >
       <Title value={"Experience"} />
       <div className=" flex justify-center items-center">
-              <div className="w-full md:w-8/12 mx-auto">
-                {experienceData.map((eData) => (
-                  <div
-                    key={eData.id}
-                    className="border  border-teal-300
+        <div className="w-full md:w-8/12 mx-auto">
+          {experienceData.map((eData) => (
+            <div
+              key={eData.id}
+              className="border  border-teal-300
                    rounded-xl 
                    shadow shadow-gray-400
                    transition-all duration-500
                    mb-6 p-4 md:p-6"
-                  >
-                    {/* Top Section */}
-                    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                      {/* Left */}
-                      <div className="flex items-center gap-4">
-                        <img
-                          className="w-14 h-14 hidden md:block rounded-full 
+            >
+              {/* Top Section */}
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                {/* Left */}
+                <div className="flex items-center gap-4">
+                  <img
+                    className="w-14 h-14 hidden md:block rounded-full 
                          ring-2 ring-green-500 
                          shadow-lg shadow-green-500/40"
-                          src={eData.logo}
-                          alt={eData.companyName}
-                        />
+                    src={eData.logo}
+                    alt={eData.companyName}
+                  />
 
-                        <div>
-                          <h4 className="text-xl md:text-2xl font-semibold uppercase text-white">
-                            {eData.companyName}
-                          </h4>
-                          <p className="text-sm md:text-base text-gray-300">
-                            {eData.designation}
-                          </p>
-                        </div>
-                      </div>
-
-                      {/* Right */}
-                      <div className="text-sm md:text-base text-gray-300 text-left md:text-right">
-                        <p>{eData.duration}</p>
-                        <p>{eData.location}</p>
-                      </div>
-                    </div>
-
-                    {/* Description */}
-                    <div className="mt-4">
-                      <p className="text-sm md:text-base text-white leading-relaxed">
-                        {eData.jobDescription}
-                      </p>
-                    </div>
+                  <div>
+                    <h4 className="text-xl md:text-2xl font-semibold uppercase text-white">
+                      {eData.companyName}
+                    </h4>
+                    <p className="text-sm md:text-base text-gray-300">
+                      {eData.designation}
+                    </p>
                   </div>
-                ))}
+                </div>
+
+                {/* Right */}
+                <div className="text-sm md:text-base text-gray-300 text-left md:text-right">
+                  <p>{eData.duration}</p>
+                  <p>{eData.location}</p>
+                </div>
               </div>
-            
-          
+
+              {/* Description */}
+              <div className="mt-4">
+                <p className="text-sm md:text-base text-white leading-relaxed">
+                  {eData.jobDescription}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
-      </section>
+      </div>
+    </motion.section>
   );
 };
 

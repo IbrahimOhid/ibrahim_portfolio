@@ -4,6 +4,8 @@ import { SlArrowUp } from "react-icons/sl";
 import Button from "../components/Button/Button";
 
 const Footer = () => {
+  const WhatsAppLink = "https://web.whatsapp.com/send?phone=8801834598910";
+
   const scrollTop = () => {
     window.scrollTo({
       top: 0,
@@ -12,36 +14,64 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative border-t border-teal-300 mt-20">
-      <div className="w-full flex items-center justify-center pt-10 flex-col gap-5 pb-24 px-4">
-        <Link
+    <footer className="border-t border-teal-400 mt-20">
+
+      {/* Main Footer */}
+      <div className="max-w-7xl mx-auto px-4 py-14 grid gap-8 place-items-center text-center">
+
+        {/* Logo */}
+        <div
           to="/"
-          className="font-bold text-2xl tracking-wider text-teal-300"
+          onClick={scrollTop}
+          className="font-bold text-xl tracking-wider text-teal-300 hover:text-white transition"
         >
           IBRAHIM.
-        </Link>
+        </div>
 
-        <p className="text-sm text-gray-400 text-center max-w-xl">
+        {/* Description */}
+        <p className="text-sm sm:text-base text-gray-400 max-w-xl leading-relaxed">
           High level experience in web design and development knowledge,
           producing quality work.
         </p>
 
-        <Button value={"Contact Us"} />
+        {/* CTA Button */}
+        <Button link={WhatsAppLink} value={"Contact Us"} />
+
       </div>
 
-      {/* Bottom Section */}
-      <div className="absolute bottom-3 left-0 right-0 px-4 flex items-center justify-between">
-        <p className="text-sm text-white">
-          Copyright © {new Date().getFullYear()} by Mohammad Ibrahim | Developed
-          By <a href="https://www.facebook.com/iCoxtechnologies" className="font-bold underline" target="_blank"><span>i</span>
-          <span>Cox</span></a>
-        </p>
+      {/* Bottom Footer */}
+      <div className="border-t border-teal-900">
+        <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
 
-        <SlArrowUp
-          onClick={scrollTop}
-          className="p-2 rounded-full border border-teal-400 hover:border-white cursor-pointer text-2xl  text-teal-300 hover:text-white  transition"
-        />
+          {/* Copyright */}
+          <p className="text-xs sm:text-sm text-gray-300 text-center sm:text-left">
+            © {new Date().getFullYear()} Mohammad Ibrahim. Developed by{" "}
+            <a
+              href="https://www.facebook.com/iCoxtechnologies"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-teal-300 hover:text-white underline"
+            >
+              iCox
+            </a>
+          </p>
+
+          {/* Scroll Top */}
+          <button
+            onClick={scrollTop}
+            className="flex items-center justify-center 
+                       w-10 h-10 sm:w-11 sm:h-11 
+                       rounded-full border border-teal-400
+                       text-teal-300 hover:text-white
+                       hover:border-white
+                       transition"
+          >
+            <SlArrowUp className="text-lg sm:text-xl" />
+          </button>
+
+        </div>
       </div>
+
     </footer>
   );
 };

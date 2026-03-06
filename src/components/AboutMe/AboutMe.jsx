@@ -5,7 +5,18 @@ import Title from "../Title/Title";
 
 const AboutMe = () => {
   return (
-    <section id="about" className="relative py-16 overflow-hidden  mx-auto ">
+    <motion.section
+      id="about"
+      className="relative py-16 overflow-hidden  mx-auto "
+      initial={{ opacity: 0 }}
+      whileInView={{
+        opacity: 1,
+        transition: {
+          duration: 2,
+        },
+      }}
+      viewport={{ once: false }}
+    >
       <Title value={"About Me"} />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 lg:gap-20 items-center">
@@ -62,7 +73,7 @@ const AboutMe = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

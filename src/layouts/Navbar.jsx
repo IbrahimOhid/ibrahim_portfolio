@@ -4,10 +4,11 @@ import { CiMenuFries } from "react-icons/ci";
 import { RxCross2 } from "react-icons/rx";
 import { navbarData } from "../data/NavbarData";
 import Button from "../components/Button/Button";
+import Resume from "/project_img/Resume - Mohammad Ibrahim.pdf";
 
 const Navbar = () => {
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
-const scrollTop = () => {
+  const scrollTop = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
@@ -16,16 +17,19 @@ const scrollTop = () => {
   return (
     <>
       <nav className="fixed left-0 top-0 right-0 z-100 flex items-center justify-between px-4 border-b border-teal-400 bg-teal-900 transition-all py-3 lg:py-0">
-        <Link to="/" onClick={scrollTop} className="font-bold text-xl tracking-wider text-teal-300">
+        <div
+          to="/"
+          onClick={scrollTop}
+          className="font-bold text-xl tracking-wider text-teal-300"
+        >
           IBRAHIM.
-        </Link>
+        </div>
 
         {/* Desktop Menu */}
         <div className="hidden sm:flex items-center gap-4 md:gap-8 text-[1rem] font-medium ">
           {navbarData.map((nav) => (
-            <div>
+            <div key={nav.id}>
               <a
-                key={nav.id}
                 href={`#${nav.path}`}
                 className="flex items-center gap-2 hover:text-teal-400 transition before:w-0  text-white hover:before:w-full before:bg-teal-400 before:h-[2px] before:transition-all before:duration-300 before:absolute relative before:rounded-full before:bottom-[-2px]  hover:text-teal-400 transition-all duration-300 before:left-0 cursor-pointer capitalize"
               >
@@ -38,15 +42,7 @@ const scrollTop = () => {
 
         <div>
           <div className="max-sm:hidden cursor-pointer  py-2  transition rounded-full">
-            {" "}
-            <a
-              href="https://www.facebook.com/iCoxtechnologies/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Messenger"
-            >
-              <Button value={"Resume"} />
-            </a>
+            <Button link={Resume} value={"Resume"} />
           </div>
 
           {/* Mobile Menu Icon */}
@@ -65,9 +61,8 @@ const scrollTop = () => {
       >
         <div className="flex flex-col items-center justify-center h-full text-xl font-semibold gap-6 p-4  ">
           {navbarData.map((nav) => (
-            <div>
+            <div key={nav.id}>
               <a
-                key={nav.id}
                 href={`#${nav.path}`}
                 className="flex items-center gap-2 hover:text-teal-400 transition before:w-0  text-white hover:before:w-full before:bg-teal-400 before:h-[2px] before:transition-all before:duration-300 before:absolute relative before:rounded-full before:bottom-[-2px]  hover:text-teal-400 transition-all duration-300 before:left-0 cursor-pointer capitalize"
               >
@@ -77,15 +72,7 @@ const scrollTop = () => {
             </div>
           ))}
           <div className="cursor-pointer  py-2  transition rounded-full">
-            {" "}
-            <a
-              href="https://www.facebook.com/iCoxtechnologies/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Messenger"
-            >
-              <Button value={"Resume"} />
-            </a>
+            <Button link={Resume} value={"Resume"} />
           </div>
           <RxCross2
             className="text-3xl  md:hidden absolute size-8 right-6 top-6 text-teal-400 hover:text-red-700 cursor-pointer"
